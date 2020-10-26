@@ -18,7 +18,7 @@ class ATCEngine:
         self.root_url = root_url
         self.cache_fn = cache_fn
         self.cache = utils.read_cache(self.cache_fn) # rxcui => atc
-        self.rce = RxCUIEngine(cache_only=cache_only)
+        self.rce = RxCUIEngine(root_url=root_url, cache_only=cache_only)
         self.session = rq.Session()
         self.cache_only = cache_only
 
